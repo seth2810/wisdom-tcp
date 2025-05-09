@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   server:
     build:
@@ -14,6 +12,8 @@ services:
     build:
       context: .
       dockerfile: .docker/client/Dockerfile
+    environment:
+      SERVER_HOST: server
     networks:
       - wow-network
     depends_on:

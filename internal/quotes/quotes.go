@@ -42,8 +42,8 @@ var quotes = []string{
 	`"I'm not a great programmer. I'm just a good programmer with great habits." ― Kent Beck`,
 }
 
-func GetRandomQuote() string {
+func GetRandomQuote() []byte {
 	idx := rand.IntN(len(quotes))
 
-	return quotes[idx]
+	return []byte(quotes[idx])
 }
